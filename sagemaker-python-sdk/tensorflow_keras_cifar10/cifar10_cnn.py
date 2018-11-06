@@ -88,7 +88,7 @@ def serving_input_fn(hyperparameters):
     """
     
     # Notice that the input placeholder has the same input shape as the Keras model input
-    tensor = tf.placeholder(tf.float32, shape=[None, HEIGHT, WIDTH, DEPTH])
+    tensor = tf.placeholder(tf.float32, [None, 32, 32, 3])
     
     # The inputs key PREDICT_INPUTS matches the Keras InputLayer name
     inputs = {PREDICT_INPUTS: tensor}
